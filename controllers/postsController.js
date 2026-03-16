@@ -1,28 +1,22 @@
-const connection = require("../data/db_recipes");
-const recipes = require("../data/recipes");
+const connection = require("../data/db_recipes"); // Vero Database
+// const recipes = require("../data/recipes"); // Finto Database
 
 function index(req, res) {
-  // Questo console log simula un errore per testare errorHandlerMiddleware.
-  // console.log(simulazioneErrore);
+  const recipeSQL = "SELECT * FROM posts";
+  connection.query(recipeSQL, (err, results) => {
+    if (err) {
+      return res.status(500).json({
+        error: "Database query failed",
+        success: false,
+      });
+    }
 
-  let filteredRecipes = recipes;
-  const tagsSearchFilter = req.query.search;
-
-  if (tagsSearchFilter) {
-    const lowCaseSearchFilter = tagsSearchFilter.toLowerCase().trim();
-    filteredRecipes = recipes.filter((recipe) =>
-      recipe.tags.some((tag) =>
-        tag.toLowerCase().includes(lowCaseSearchFilter),
-      ),
-    );
-  }
-  const responseData = {
-    message: "Index of all posts",
-    result: filteredRecipes,
-    success: true,
-  };
-
-  res.status(200).json(responseData);
+    res.json({
+      success: true,
+      message: "List of recipe posts",
+      results: results,
+    });
+  });
 }
 
 function show(req, res) {
