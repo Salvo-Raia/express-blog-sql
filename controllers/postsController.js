@@ -20,25 +20,30 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  const postId = parseInt(req.params.id);
-  const recipe = recipes.find((recipe) => recipe.id === postId);
+  const postId = req.params.id;
+  const recipeSQL = "SELECT * FROM posts WHERE id = ?";
 
-  if (!recipe) {
-    const responseData = {
-      message: `Recipe ${postId} not found`,
-      success: false,
-    };
+  connection.query(recipeSQL, [postId], function (err, results) {
+    if (err) {
+      return res.status(500).json({
+        success: false,
+        message: "Database query failed",
+      });
+    }
 
-    return res.status(404).json(responseData);
-  }
+    if (results.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: "Post not found",
+      });
+    }
 
-  const responseData = {
-    message: `Post ${postId} detail content`,
-    result: recipe,
-    success: true,
-  };
-
-  res.status(200).json(responseData);
+    res.status(200).json({
+      success: true,
+      message: `Post ${postId} detail page`,
+      result: results[0],
+    });
+  });
 }
 
 function store(req, res) {
