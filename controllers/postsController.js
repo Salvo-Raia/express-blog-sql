@@ -119,23 +119,25 @@ function modify(req, res) {
 }
 
 function destroy(req, res) {
-  const postId = parseInt(req.params.id);
-  const recipe = recipes.find((recipe) => recipe.id === postId);
+  const postId = req.params.id;
+  const recipeSQL = "DELETE FROM posts WHERE id = ?";
 
-  if (!recipe) {
-    const responseData = {
-      message: `Recipe ${postId} not found`,
-      success: false,
-    };
+  connection.query(recipeSQL, [postId], function (err, results) {
+    if (err) {
+      return res.status(500).json({
+        success: false,
+        message: "Database query failed",
+      });
+    }
 
-    return res.status(404).json(responseData);
-  }
+    if (results.affectedRows === 0) {
+      return res.status(404).json({
+        success: false,
+        message: "Post not found",
+      });
+    }
 
-  recipes.splice(recipes.indexOf(recipe), 1);
-  console.log(
-    `Post ${postId} successfully deleted. Here you can find the updated posts list:`,
-    recipes,
-  );
-  res.sendStatus(204);
+    res.status(204);
+  });
 }
 module.exports = { index, show, store, update, modify, destroy };
