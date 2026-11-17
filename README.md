@@ -1,8 +1,6 @@
+![Static Badge](https://img.shields.io/badge/Boolean_Tech_Academy-1565C0?style=for-the-badge)
 
-
-![Boolean Tech Academy](https://img.shields.io/badge/Boolean_Tech_Academy-001632?style=for-the-badge)
-
-# 🎓 Exercise 48/50 - Express Blog SQL
+# 🎓 Exercise 48/50: Express Blog SQL
 
 Integrate a MySQL database into the existing Express Blog API to store and retrieve blog posts with persistent data storage.
 
@@ -19,7 +17,7 @@ Integrate a MySQL database into the existing Express Blog API to store and retri
 
 Extend the previously developed Express Blog API by connecting it to a MySQL database and replacing in-memory data handling with persistent database operations.
 
-### Milestone 1 - Database Connection
+#### Milestone 1 - Database Connection
 
 - Import the provided database into MySQL Workbench.
 - Install the **mysql2** package in the Express application:
@@ -32,26 +30,26 @@ Extend the previously developed Express Blog API by connecting it to a MySQL dat
 - Add a `console.log` to the connection logic.
 - Start the application and verify that the database connection works without errors.
 
-### Milestone 2 - INDEX: Retrieve All Posts
+#### Milestone 2 - INDEX: Retrieve All Posts
 
 - Update the INDEX API to retrieve the list of posts from the database.
 - Return the retrieved posts in JSON format.
 - Test the endpoint using Postman and verify that the response is correct.
 
-### Milestone 3 - DESTROY: Delete a Post
+#### Milestone 3 - DESTROY: Delete a Post
 
 - Update the DESTROY API to delete a post from the database.
 - Test the endpoint using Postman.
 - Verify that the request succeeds and returns an HTTP `204 No Content` response.
 - Open MySQL Workbench and confirm that the post has actually been deleted.
 
-### Milestone 4 - SHOW: Retrieve a Single Post
+#### Milestone 4 - SHOW: Retrieve a Single Post
 
 - Update the SHOW API to retrieve the requested post from the database.
 - Return the post in JSON format.
 - Test the endpoint using Postman and verify that the response is correct.
 
-### Bonus - Retrieve Posts with Tags
+### ⭐ Bonus
 
 Extend the SHOW API so that each post is returned together with its associated tags.
 
@@ -76,5 +74,4 @@ Extend the SHOW API so that each post is returned together with its associated t
 
 ## ©️ Credits
 
-Exercise assigned by **Boolean Tech Academy** as part of the Web Development course - Class 152 - Year 2025-2026
-
+Exercise assigned by **Boolean Tech Academy** as part of the Web Development course (Class 152, A.Y. 2025–2026).
