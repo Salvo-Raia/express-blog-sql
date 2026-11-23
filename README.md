@@ -8,7 +8,7 @@ Integrate a MySQL database into the existing Express Blog API to store and retri
 
 | Repository | Project | Category | Main Focus | Exercise |
 |:--|:--|:--|:--|:--|
-| express-blog-sql | Express Blog SQL | Exercise | Express, MySQL & Database queries | 48/50 |
+| express-blog-sql | Express Blog SQL | Exercise | Express, MySQL, database queries | 48/50 |
 
 ## Assignment
 
@@ -40,7 +40,7 @@ Extend the previously developed Express Blog API by connecting it to a MySQL dat
 - Verify that the request succeeds and returns an HTTP `204 No Content` response.
 - Open MySQL Workbench and confirm that the post has actually been deleted.
 
-#### Milestone 4: SHOW - Retrieve a single Post
+#### Milestone 4: SHOW - Retrieve a single post
 
 - Update the SHOW API to retrieve the requested post from the database.
 - Return the post in JSON format.
@@ -48,17 +48,17 @@ Extend the previously developed Express Blog API by connecting it to a MySQL dat
 
 #### Bonus challenge
 
-Extend the SHOW API so that each post is returned together with its associated tags.
+Extend the SHOW API to return each post together with its associated tags.
 
 - Retrieve the tags through the existing relationship between posts and tags in the database.
 - Include the associated tags in the JSON response.
 
 ## Technologies
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) 
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![npm](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white) 
-![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white) 
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) 
+![npm](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![MySQL Workbench](https://img.shields.io/badge/MySQL_Workbench-4479A1?style=flat-square&logo=mysql&logoColor=white)
 
 ## What I learned
