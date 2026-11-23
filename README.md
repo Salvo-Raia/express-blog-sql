@@ -8,7 +8,7 @@ Integrate a MySQL database into the existing Express Blog API to store and retri
 
 | Repository | Project | Category | Main Focus | Exercise |
 |:--|:--|:--|:--|:--|
-| express-blog-sql | Express Blog SQL | Exercise | Express, MySQL integration & Database queries | 48/50 |
+| express-blog-sql | Express Blog SQL | Exercise | Express, MySQL & Database queries | 48/50 |
 
 ## Assignment
 
