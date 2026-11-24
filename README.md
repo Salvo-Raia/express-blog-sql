@@ -16,6 +16,8 @@ Extend the previously developed Express Blog API by connecting it to a MySQL dat
 
 #### Milestone 1: Database connection
 
+Set up the MySQL connection required by the Express application.
+
 - Import the provided database into MySQL Workbench.
 - Install the **mysql2** package in the Express application.
 
@@ -29,20 +31,23 @@ Extend the previously developed Express Blog API by connecting it to a MySQL dat
 
 #### Milestone 2: INDEX - Retrieve all posts
 
-- Update the INDEX API to retrieve the list of posts from the database.
+Update the INDEX endpoint to retrieve the list of all posts from the database.
+
 - Return the retrieved posts in JSON format.
 - Test the endpoint using Postman and verify that the response is correct.
 
 #### Milestone 3: DESTROY - Delete a post
 
-- Update the DESTROY API to delete a post from the database.
+Implement the DESTROY endpoint to delete a post from the database.
+
 - Test the endpoint using Postman.
 - Verify that the request succeeds and returns an HTTP `204 No Content` response.
 - Open MySQL Workbench and confirm that the post has actually been deleted.
 
 #### Milestone 4: SHOW - Retrieve a single post
 
-- Update the SHOW API to retrieve the requested post from the database.
+Implement the SHOW endpoint to retrieve a single post from the database.
+
 - Return the post in JSON format.
 - Test the endpoint using Postman and verify that the response is correct.
 
